@@ -1,0 +1,12 @@
+extends ../layouts/common.pug
+block content
+    h1 Signin
+    form(action="/auth/signin", method="POST")
+        .mb-3
+            label(class="form-label",for="username") Username
+            input#email.form-control(type="text", name="username" )
+        .mb-3   
+            label(class="form-label", for="password") Password
+            input#password.form-control(type="password", name="password")
+    
+        button(class="btn btn-primary ms-2") Signin
