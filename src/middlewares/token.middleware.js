@@ -1,5 +1,5 @@
 import Jsonwebtoken from "jsonwebtoken";
-import responseHandler from "../handlers/response.handler";
+import responseHandler from "../handlers/response.handler.js";
 import pool from "../../connectionDB.js";
 import dotenv from "dotenv";
 dotenv.config()

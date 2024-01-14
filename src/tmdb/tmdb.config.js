@@ -1,3 +1,4 @@
+import "dotenv/config"
 const baseUrl=process.env.TMDB_BASE_URL
 const key=process.env.TMDB_KEY
 
@@ -7,3 +8,5 @@ const getUrl = (endpoint, params) =>{
 }
 
 export default {getUrl};
+
+

@@ -7,6 +7,7 @@ const app = express();
 
 
 import {default as userRouter} from './src/routes/user.route.js'
+import {default as mediaRouter} from './src/routes/media.route.js'
 
 app.set('view engine', 'pug');
 app.set('views', './src/views');
@@ -17,16 +18,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-const password = 'trongdat1335'
-const hashPassword=md5(password);
-console.log(password);
-console.log(hashPassword);
-console.log(md5('trongdat1335'));
 
 
-
-
-app.use('/auth',userRouter);
+app.use('/api/user',userRouter);
+app.use('/api/media',mediaRouter);
 const port = 3300;
 
-app.listen(3300,()=>{console.log('listening on port '+port);});
+app.listen(port,()=>{console.log('listening on port '+port);});
